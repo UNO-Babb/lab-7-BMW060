@@ -10,8 +10,10 @@ def isThreeOrFive(n):
 
 def isPrime(p):
   """Returns boolean (True/False) if the value given is prime."""
+  p = input("enter a number: ")
+  for i in range(p):
+    print(i)
 
-  return True
 
 def isEven(n):
   """Returns boolean about given value being even."""
