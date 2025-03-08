@@ -3,18 +3,8 @@
 # Brennan Wood 
 # 3/8/25
 
-def sumSquare(num):
-    squares = []
-    for i in range(1, num + 1):
-        square = i * i
-        squares.append(square)
-    return sum(squares)
-
-def squareSum(num):
-    sum = 0
-    for i in range(1, num + 1):
-        sum = sum + i
-    return sum ** 2
+from NumberTests import squareSum
+from NumberTests import sumSquare
 
 
 

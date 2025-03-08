@@ -56,6 +56,39 @@ def fibonacciSequence(value):
 
   return nums
 
+
+### THESE ARE THE FUNCTIONS I ADDED ###
+
+# Squaring and then adding
+def sumSquare(num):
+    squares = []
+    for i in range(1, num + 1):
+        square = i * i
+        squares.append(square)
+    return sum(squares)
+
+# adding and then squaring
+def squareSum(num):
+    sum = 0
+    for i in range(1, num + 1):
+        sum = sum + i
+    return sum ** 2
+
+# Finding the factorial
+def factorial(num):
+    fac = num
+    for i in range(1, num):
+        fac = fac * (num-i)
+    return fac
+
+# adding the digts of a number
+def digSum(fac):
+    fac = str(fac)
+    added = 0
+    for i in range(len(fac)):
+        added = added + int(fac[i])
+    return added
+
 #Test your new functions in this main
 def main():
   knownPrimes = [3, 7, 11, 13, 17]
