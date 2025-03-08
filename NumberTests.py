@@ -7,12 +7,27 @@ def isThreeOrFive(n):
     return True
   else:
     return False
+def getFactors(num):
+  factors = []
+  for f in range(1,num):
+    if num % f == 0:
+      factors.append(f)
+
+  return factors
+
 
 def isPrime(p):
   """Returns boolean (True/False) if the value given is prime."""
-  p = input("enter a number: ")
-  for i in range(p):
-    print(i)
+  if p == 2:
+    return True
+  elif isEven(p):
+    return False
+  for i in range(3,p):
+    if p % i == 0:
+      return False
+    else:
+      return True
+  return True
 
 
 def isEven(n):

@@ -5,28 +5,23 @@
 
 
 from NumberTests import isPrime
-from NumberTests import fibonacciSequence
+from NumberTests import getFactors
 
 
 
-def factors(p):
-  for i in range(2,p):
-    if p % i == 0:
-      return False
-    else:
-      return True
-  return factors
+
 def main(): 
-  p = int(input("Enter a number: "))
-  fac = factors(p)
-  print(fac)
+  number = 84
+  factors = getFactors(number)
+  print(factors)
+
+  primeFactors = []
+  for f in factors:
+    if isPrime(f):
+      primeFactors.append(f)
   
-  #p = int(input("Enter a number: "))
-  #length = []
-  #for i in range(p):
-  #  length.append(i+1)
-  #print(length)
-
-
+  print(primeFactors)
+  print(primeFactors[-1]) #used this to grab the biggest value in the prime factors list
+  print("The largest prime factor of",number,"is",primeFactors[-1])
 if __name__ == '__main__':
   main()
