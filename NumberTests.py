@@ -25,8 +25,6 @@ def isPrime(p):
   for i in range(3,p):
     if p % i == 0:
       return False
-    else:
-      return True
   return True
 
 
